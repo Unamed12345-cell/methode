@@ -1,7 +1,7 @@
 /* Ajout de la police Birds of Paradise */
 @font-face {
     font-family: 'Birds of Paradise';
-    src: url('fonts/birds_of_paradise/Birds\ of\ Paradise\ ©\ PERSONAL\ USE\ ONLY.ttf') format('truetype'); /* Remplacez par le chemin réel */
+    src: url('fonts/birds_of_paradise/Birds%20of%20Paradise%20©%20PERSONAL%20USE%20ONLY.ttf') format('truetype');
 }
 
 /* Global Styles */
@@ -51,73 +51,51 @@ main {
 
 /* Footer */
 footer {
-    background-color: #000; /* Fond noir */
-    color: #fff;           /* Texte blanc */
-    padding: 1rem 2rem;    /* Espacement */
-    text-align: center;    /* Centrer le contenu */
-    font-size: 0.9rem;     /* Taille du texte */
-    font-family: 'Birds of Paradise', sans-serif; /* Police simple et épurée */
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Birds of Paradise', sans-serif;
 }
 
 footer .tools {
-    margin-bottom: 1rem; /* Espacement sous les liens */
+    margin-bottom: 1rem;
 }
 
 footer .tools a {
-    color: #fff;           /* Liens en blanc */
-    text-decoration: none; /* Pas de soulignement */
-    margin: 0 1rem;        /* Espacement horizontal */
-    font-size: 1rem;       /* Taille des liens */
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
 }
 
 footer .tools a:hover {
-    text-decoration: underline; /* Souligner les liens au survol */
-}
-/* Styles par défaut */
-img.responsive-image {
-    width: 400px; /* Taille par défaut */
-    height: 400px; /* Taille par défaut */
+    text-decoration: underline;
 }
 
-/* Taille spécifique pour votre ordinateur portable (1366px) */
-img.responsive-image {
-    width: 400px; /* Largeur par défaut */
-    height: auto; /* Conserve les proportions par défaut */
+/* Style général pour l'image */
+.responsive-image {
+    width: 300px;   /* Largeur de l'image en pixels */
+    height: 300px;  /* Hauteur de l'image en pixels */
+    margin: 0 auto;
+    display: block;
 }
 
-/* Conteneur pour l'image */
+/* Conteneur de l'image */
 .single-image {
     display: flex;
-    justify-content: center; /* Centre l'image horizontalement */
-    align-items: center;     /* Centre l'image verticalement (si nécessaire) */
-    width: 100%;
-    height: 100%;            /* Assurez-vous que le conteneur occupe toute la hauteur de l'écran ou de son parent */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajuste la hauteur du conteneur pour centrer l'image */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/* Pour l'image responsive */
-img.responsive-image {
-    width: 100%;        /* L'image prend 100% de la largeur du conteneur */
-    max-width: 300px;   /* L'image ne dépassera pas 300px */
-    height: auto;       /* Ajuste la hauteur en fonction de la largeur */
-    margin: 0 auto;     /* Centrer l'image horizontalement */
-    display: block;     /* Permet de supprimer l'espace blanc sous l'image */
-}
-
-/* Media query pour les petits écrans (par exemple, smartphones) */
+/* Media query pour les petits écrans */
 @media (max-width: 600px) {
-    .single-image {
-        height: auto; /* Vous pouvez ajuster la hauteur pour les petits écrans */
-    }
-
     img.responsive-image {
-        width: 80%;         /* L'image prendra 80% de la largeur de l'écran sur mobile */
-        max-width: 300px;   /* Taille maximale de l'image */
-    }
-}
-/* Taille pour des écrans plus grands (par exemple, desktops) */
-@media (min-width: 1920px) {
-    img.responsive-image {
-        width: 500px;
-        height: 400px;
+        width: 450px;  /* Largeur de l'image en pixels pour les petits écrans */
+        height: 450px; /* Hauteur de l'image en pixels pour les petits écrans */
     }
 }
