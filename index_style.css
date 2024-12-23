@@ -75,27 +75,49 @@ footer .tools a:hover {
 }
 
 /* Style général pour l'image */
-.responsive-image {
-    width: 300px;   /* Largeur de l'image en pixels */
-    height: 300px;  /* Hauteur de l'image en pixels */
-    margin: 0 auto;
-    display: block;
+.single-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Ajoutez align-items pour un centrage vertical */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px; /* Espace autour de l'image si nécessaire */
+    width: 100%; /* Assurez-vous que le conteneur occupe toute la largeur disponible */
 }
 
-/* Conteneur de l'image */
+.single-image img {
+    width: 80%;    /* L'image prendra toute la largeur disponible */
+    max-width: 250px;  /* Taille maximale de l'image */
+    height: auto;   /* La hauteur est ajustée automatiquement pour maintenir les proportions */
+    display: block; /* Eviter tout espace en dessous de l'image */
+    margin: 0 auto;  /* Assurez-vous que l'image est centrée horizontalement */
+}
+
 .single-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajuste la hauteur du conteneur pour centrer l'image */
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 80%;
+    padding: 0;  /* Optionnel : Si vous souhaitez enlever tout espacement autour de l'image */
+    margin: 0 auto;  /* Centrer le conteneur */
+}
+
+.single-image img {
+    display: block;   /* Supprimer l'espace en dessous de l'image */
+    width: 80%;        /* L'image prendra toute la largeur du conteneur */
+    max-width: 400px;   /* Limiter la taille de l'image */
+    height: auto;       /* La hauteur s'ajuste automatiquement pour préserver les proportions */
 }
 
 /* Media query pour les petits écrans */
-@media (max-width: 400px) {
-    img.responsive-image {
-        width: 450px;  /* Largeur de l'image en pixels pour les petits écrans */
-        height: 450px; /* Hauteur de l'image en pixels pour les petits écrans */
+
+@media (max-width: 768px) {
+    .single-image img {
+        width: 140%;       /* L'image prendra toute la largeur disponible */
+        max-width: 600px;  /* Limitation de la taille maximale */
+        margin-top: 0px;   /* Ajuster la marge supérieure sur mobile */
+        margin-bottom: 0px;   /* Ajuster la marge inférieure sur mobile */
+        margin-left: 10px;    /* Ajuster la marge gauche sur mobile */
+        margin-right: 10px;   /* Ajuster la marge droite sur mobile */
     }
 }
