@@ -48,10 +48,10 @@ body {
 /* Media query pour les petits écrans */
 @media (max-width: 768px) {
     .single-image img {
-        width: 100%;       /* L'image prendra toute la largeur disponible */
-        max-width: 500px;  /* Limitation de la taille maximale */
-        margin-top: 5px;   /* Ajuster la marge supérieure sur mobile */
-        margin-bottom: 5px;   /* Ajuster la marge inférieure sur mobile */
+        width: 140%;       /* L'image prendra toute la largeur disponible */
+        max-width: 600px;  /* Limitation de la taille maximale */
+        margin-top: 0px;   /* Ajuster la marge supérieure sur mobile */
+        margin-bottom: 0px;   /* Ajuster la marge inférieure sur mobile */
         margin-left: 10px;    /* Ajuster la marge gauche sur mobile */
         margin-right: 10px;   /* Ajuster la marge droite sur mobile */
     }
