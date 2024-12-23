@@ -93,7 +93,7 @@ footer .tools a:hover {
 }
 
 /* Media query pour les petits écrans */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     img.responsive-image {
         width: 450px;  /* Largeur de l'image en pixels pour les petits écrans */
         height: 450px; /* Hauteur de l'image en pixels pour les petits écrans */
