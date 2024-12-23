@@ -85,14 +85,35 @@ img.responsive-image {
     height: auto; /* Conserve les proportions par défaut */
 }
 
-/* Taille pour des écrans plus petits (par exemple, smartphones) */
-@media (max-width: 600px) {
-    img.responsive-image {
-        width: 500px;
-        height: 500px;
-    }
+/* Conteneur pour l'image */
+.single-image {
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center;     /* Centre l'image verticalement (si nécessaire) */
+    width: 100%;
+    height: 100%;            /* Assurez-vous que le conteneur occupe toute la hauteur de l'écran ou de son parent */
 }
 
+/* Pour l'image responsive */
+img.responsive-image {
+    width: 100%;        /* L'image prend 100% de la largeur du conteneur */
+    max-width: 300px;   /* L'image ne dépassera pas 300px */
+    height: auto;       /* Ajuste la hauteur en fonction de la largeur */
+    margin: 0 auto;     /* Centrer l'image horizontalement */
+    display: block;     /* Permet de supprimer l'espace blanc sous l'image */
+}
+
+/* Media query pour les petits écrans (par exemple, smartphones) */
+@media (max-width: 600px) {
+    .single-image {
+        height: auto; /* Vous pouvez ajuster la hauteur pour les petits écrans */
+    }
+
+    img.responsive-image {
+        width: 80%;         /* L'image prendra 80% de la largeur de l'écran sur mobile */
+        max-width: 300px;   /* Taille maximale de l'image */
+    }
+}
 /* Taille pour des écrans plus grands (par exemple, desktops) */
 @media (min-width: 1920px) {
     img.responsive-image {

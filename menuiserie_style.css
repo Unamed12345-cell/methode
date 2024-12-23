@@ -22,21 +22,41 @@ body {
 }
 
 .single-image img {
-    width: 100%;    /* L'image prendra toute la largeur disponible */
-    max-width: 280px;  /* Taille maximale de l'image */
+    width: 80%;    /* L'image prendra toute la largeur disponible */
+    max-width: 250px;  /* Taille maximale de l'image */
     height: auto;   /* La hauteur est ajustée automatiquement pour maintenir les proportions */
     display: block; /* Eviter tout espace en dessous de l'image */
     margin: 0 auto;  /* Assurez-vous que l'image est centrée horizontalement */
 }
 
-/* Media query pour les petits écrans (mobile) */
+.single-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 0;  /* Optionnel : Si vous souhaitez enlever tout espacement autour de l'image */
+    margin: 0 auto;  /* Centrer le conteneur */
+}
+
+.single-image img {
+    display: block;   /* Supprimer l'espace en dessous de l'image */
+    width: 80%;        /* L'image prendra toute la largeur du conteneur */
+    max-width: 400px;   /* Limiter la taille de l'image */
+    height: auto;       /* La hauteur s'ajuste automatiquement pour préserver les proportions */
+}
+
+/* Media query pour les petits écrans */
 @media (max-width: 768px) {
     .single-image img {
-        width: 100%;     /* L'image prend toute la largeur de l'écran sur mobile */
-        max-width: 500px; /* Taille maximale de l'image sur mobile */
-        margin: 0 auto;   /* Centrage horizontal de l'image */
+        width: 100%;       /* L'image prendra toute la largeur disponible */
+        max-width: 500px;  /* Limitation de la taille maximale */
+        margin-top: 5px;   /* Ajuster la marge supérieure sur mobile */
+        margin-bottom: 5px;   /* Ajuster la marge inférieure sur mobile */
+        margin-left: 10px;    /* Ajuster la marge gauche sur mobile */
+        margin-right: 10px;   /* Ajuster la marge droite sur mobile */
     }
 }
+
 /* Header */
 header {
     background-color: #000;
