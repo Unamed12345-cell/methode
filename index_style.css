@@ -81,15 +81,15 @@ img.responsive-image {
 
 /* Taille spécifique pour votre ordinateur portable (1366px) */
 img.responsive-image {
-    width: 300px; /* Largeur par défaut */
+    width: 400px; /* Largeur par défaut */
     height: auto; /* Conserve les proportions par défaut */
 }
 
 /* Taille pour des écrans plus petits (par exemple, smartphones) */
 @media (max-width: 600px) {
     img.responsive-image {
-        width: 250px;
-        height: 250px;
+        width: 500px;
+        height: 500px;
     }
 }
 
