@@ -73,4 +73,30 @@ footer .tools a {
 footer .tools a:hover {
     text-decoration: underline; /* Souligner les liens au survol */
 }
+/* Styles par défaut */
+img.responsive-image {
+    width: 400px; /* Taille par défaut */
+    height: 400px; /* Taille par défaut */
+}
 
+/* Taille spécifique pour votre ordinateur portable (1366px) */
+img.responsive-image {
+    width: 300px; /* Largeur par défaut */
+    height: auto; /* Conserve les proportions par défaut */
+}
+
+/* Taille pour des écrans plus petits (par exemple, smartphones) */
+@media (max-width: 600px) {
+    img.responsive-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Taille pour des écrans plus grands (par exemple, desktops) */
+@media (min-width: 1920px) {
+    img.responsive-image {
+        width: 500px;
+        height: 400px;
+    }
+}
