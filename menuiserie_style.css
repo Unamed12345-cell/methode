@@ -11,15 +11,6 @@ body {
     color: #000;
     line-height: 1.6;
 }
-.single-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;  /* Ajoutez align-items pour un centrage vertical */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px; /* Espace autour de l'image si nécessaire */
-    width: 100%; /* Assurez-vous que le conteneur occupe toute la largeur disponible */
-}
 
 .single-image img {
     width: 80%;    /* L'image prendra toute la largeur disponible */
@@ -49,7 +40,7 @@ body {
 @media (max-width: 768px) {
     .single-image img {
         width: 140%;       /* L'image prendra toute la largeur disponible */
-        max-width: 600px;  /* Limitation de la taille maximale */
+        max-width: px;  /* Limitation de la taille maximale */
         margin-top: 0px;   /* Ajuster la marge supérieure sur mobile */
         margin-bottom: 0px;   /* Ajuster la marge inférieure sur mobile */
         margin-left: 10px;    /* Ajuster la marge gauche sur mobile */
