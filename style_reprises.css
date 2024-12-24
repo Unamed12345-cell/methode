@@ -2,6 +2,10 @@
     font-family: 'Metal Mania';
     src: url('fonts/metal_mania/Metal\ Mania.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Hystory of wawa';
+    src: url('fonts/history_of_wawa/History\ of\ Wawa.ttf');
+}
 
 body {
     font-family: 'Metal Mania', sans-serif;
@@ -110,9 +114,9 @@ main {
 }
 
 .mosaic-realisations figcaption {
-    font-size: 12px; /* Ajuste la taille de la légende */
+    font-size: 10px; /* Ajuste la taille de la légende */
     text-align: center; /* Centre le texte */
-    margin-top: 5px; /* Espacement entre l'image et le texte */
+    margin-top: 0px; /* Espacement entre l'image et le texte */
     color: #333; /* Couleur du texte */
     white-space: nowrap; /* Pas de retour à la ligne */
     overflow: hidden; /* Coupe le texte débordant */
@@ -342,7 +346,25 @@ header h1 a:visited {
     line-height: 1.8; /* Espacement entre les lignes */
     margin-bottom: -15px; /* Espacement entre chaque élément de la liste (ajustez à votre convenance) */
     color: black; /* Couleur du texte */
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Hystory of Wawa', sans-serif;}
+ br {
+    line-height: 0.1; /* Réduit la hauteur du saut de ligne */
+    display: block; /* Garantit que le <br> est pris en compte comme un bloc */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */}
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 600px) {
+    #lyrics-list {
+        width: 100%; /* Utilise toute la largeur disponible */
+        padding-left: 10px; /* Ajoute un peu de padding à gauche */
+        padding-right: 10px; /* Ajoute un peu de padding à droite */
+    }
+
+    #lyrics-list li {
+        font-size: 1.2rem; /* Augmente légèrement la taille de la police pour la lisibilité */
+        line-height: 0,5; /* Augmente l'espacement entre les lignes pour plus de confort */
+        margin-bottom: -15px; /* Ajoute un peu d'espace entre les éléments */
+    }
 }
 #chords-list {
     list-style-type: none; /* Supprime les puces par défaut */
