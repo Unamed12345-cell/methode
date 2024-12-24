@@ -119,15 +119,26 @@ main {
     text-overflow: ellipsis; /* Ajoute des "..." si le texte est trop long */
 }
 
-
-.mosaic-realisations img:hover {
-    transform: scale(1.1); /* Agrandissement léger au survol */
+/* Media Queries pour les petits écrans */
+@media (max-width: 768px) {
+    .mosaic-realisations figure {
+        width: calc(33.33% - 10px); /* Chaque élément prend environ 1/3 de la largeur sur un écran plus petit */
+    }
 }
 
-.mosaic-realisations figcaption:hover {
-    color: deeppink; /* Couleur deep pink pour les légendes au survol */
+/* Media Queries pour les très petits écrans (mobile portrait) */
+@media (max-width: 480px) {
+    .mosaic-realisations figure {
+        width: calc(50% - 10px); /* Chaque élément prend 1/2 de la largeur */
+    }
 }
 
+/* Pour les écrans encore plus petits (téléphones très petits) */
+@media (max-width: 320px) {
+    .mosaic-realisations figure {
+        width: 100%; /* Les éléments prennent toute la largeur de l'écran */
+    }
+}
 /* Conteneur principal */
 .album-container {
     position: relative;
