@@ -127,28 +127,7 @@ main {
 .mosaic-realisations figcaption:hover {
     color: deeppink; /* Couleur deep pink pour les légendes au survol */
 }
-/* Écrans petits (smartphones) */
-@media (max-width: 480px) {
-    .mosaic-realisations figure {
-        width: calc(50% - 10px); /* 2 éléments par ligne */
-        max-width: 100%; /* Prend toute la largeur */
-    }
 
-    .mosaic-realisations img {
-        border-radius: 3px; /* Coins légèrement moins arrondis */
-    }
-
-    .mosaic-realisations figcaption {
-        font-size: 9px; /* Taille plus petite pour la légende */
-    }
-}
-
-/* Très petits écrans */
-@media (max-width: 320px) {
-    .mosaic-realisations figure {
-        width: calc(100% - 10px); /* 1 élément par ligne */
-    }
-}
 /* Conteneur principal */
 .album-container {
     position: relative;
@@ -222,8 +201,9 @@ main {
     font-size: 1.2rem;
     font-family: 'Metal Mania', sans-serif;
     display: block; /* Assure que chaque lien occupe une ligne entière */
-    width: 100%;  /* Optionnel : pour que le lien occupe toute la largeur du conteneur */
+    width: 100%; /* Optionnel : pour que le lien occupe toute la largeur du conteneur */
     transition: color 0.3s ease; /* Transition fluide */
+    line-height: 1; /* Réduit l'espace entre les lignes du texte */
 }
 
 #song-list li a:hover {
@@ -336,4 +316,44 @@ header h1 a:visited {
         height: auto;             /* Maintient le ratio d'aspect */
         margin: 0;                /* Supprime toutes les marges */
     }
+}
+#lyrics-list {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Retire le padding */
+    text-align: center; /* Centre le texte dans la liste */
+    margin: 0 auto; /* Centre la liste horizontalement */
+    width: 90%; /* Largeur de la liste */
+    max-width: 800px; /* Largeur maximale de la liste */
+}
+
+#lyrics-list li {
+    font-size: 1.0rem; /* Taille de la police (ajustez à votre convenance) */
+    line-height: 1.8; /* Espacement entre les lignes */
+    margin-bottom: -15px; /* Espacement entre chaque élément de la liste (ajustez à votre convenance) */
+    color: black; /* Couleur du texte */
+    font-family: 'Courier New', Courier, monospace;
+}
+#chords-list {
+    list-style-type: none; /* Supprime les puces par défaut */
+    padding: 0; /* Élimine le padding interne de la liste */
+    margin: 0; /* Élimine les marges externes de la liste */
+    text-align: center; /* Alignement du texte (ajustable selon vos besoins) */
+}
+
+#chords-list li {
+    margin: 2px 0; /* Réduit l'espacement vertical entre les éléments */
+}
+
+#chords-list li p {
+    margin: 0; /* Supprime toute marge interne au paragraphe */
+    padding: 0; /* Supprime le padding si nécessaire */
+    font-size: 1rem; /* Ajustez la taille de la police selon vos besoins */
+    color: #000;
+}
+.header-songs {
+    color: #000; /* Définit la couleur du texte en noir */
+    font-size: 2rem; /* Taille de la police (ajustez selon vos besoins) */
+    font-weight: bold; /* Rendre le texte en gras, si souhaité */
+    text-align: center; /* Centrer le texte */
+    margin: 20px 0; /* Espacement autour du titre */
 }
