@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'Metal Mania';
+    src: url('fonts/metal_mania/Metal\ Mania.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Metal Mania', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+header h1 {
+    font-family: 'Metal Mania';
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff; /* Le titre reste blanc par défaut */
+    transition: color 0.3s ease; /* Transition fluide pour la couleur */
+}
+
+header h1 a {
+    text-decoration: none; /* Supprime la décoration du lien */
+    color: #fff; /* Le lien à l'intérieur du titre reste blanc */
+}
+
+header h1:hover {
+    color: deeppink; /* Le titre entier devient deeppink au survol */
+}
+
+header h1 a:visited {
+    color: #fff; /* Le lien visité reste blanc */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease; /* Transition fluide */
+}
+
+nav ul li a:hover {
+    color: deeppink; /* Couleur deep pink au survol */
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    padding: 2rem;
+}
+.h1 {
+    text-align: center;
+}
+.mosaic-realisations {
+    width: 100%; /* Prend toute la largeur de l'écran */
+    display: flex; /* Active le modèle flexbox */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    margin: 0; /* Supprime les marges externes */
+    justify-content: center; /* Centre les éléments */
+    gap: 5px; /* Réduit l'espacement entre les éléments */
+    padding: 0; /* Supprime le padding interne */
+    box-sizing: border-box; /* Inclut padding et bordure dans les calculs */
+}
+
+.mosaic-realisations figure {
+    margin: 0; /* Supprime les marges autour des figures */
+    padding: 0; /* Supprime le padding */
+    width: calc(16.66% - 10px); /* Chaque élément prend environ 1/6 de la largeur avec gap */
+    max-width: 200px; /* Limite la taille pour garder une esthétique cohérente */
+    box-sizing: border-box; /* Garantit que la largeur inclut le padding */
+    display: flex; /* Active flexbox à l'intérieur de chaque figure */
+    flex-direction: column; /* Place l'image au-dessus du texte */
+    align-items: center; /* Centre l'image et le texte */
+}
+
+.mosaic-realisations img {
+    width: 100%; /* L'image remplit la largeur du conteneur */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    object-fit: cover; /* Assure que l'image remplit bien son conteneur */
+    border-radius: 5px; /* Optionnel : ajoute des coins arrondis */
+    transition: transform 0.3s ease; /* Ajoute une animation douce */
+}
+
+.mosaic-realisations img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+}
+
+.mosaic-realisations figcaption {
+    font-size: 20px; /* Ajuste la taille de la légende */
+    text-align: center; /* Centre le texte */
+    margin-top: 0px; /* Espacement entre l'image et le texte */
+    color: #333; /* Couleur du texte */
+    white-space: nowrap; /* Pas de retour à la ligne */
+    overflow: hidden; /* Coupe le texte débordant */
+    text-overflow: ellipsis; /* Ajoute des "..." si le texte est trop long */
+}
+
+/* Media Queries pour les petits écrans */
+@media (max-width: 768px) {
+    .mosaic-realisations figure {
+        width: calc(33.33% - 10px); /* Chaque élément prend environ 1/3 de la largeur sur un écran plus petit */
+    }
+}
+
+/* Media Queries pour les très petits écrans (mobile portrait) */
+@media (max-width: 480px) {
+    .mosaic-realisations figure {
+        width: calc(50% - 10px); /* Chaque élément prend 1/2 de la largeur */
+    }
+}
+
+/* Pour les écrans encore plus petits (téléphones très petits) */
+@media (max-width: 320px) {
+    .mosaic-realisations figure {
+        width: 100%; /* Les éléments prennent toute la largeur de l'écran */
+    }
+}
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Metal Mania';
+}
+
+footer .tools {
+    margin-bottom: 1rem;
+}
+
+footer .tools a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .tools a:hover {
+    color: deeppink;
+    text-decoration: underline;
+}
+
