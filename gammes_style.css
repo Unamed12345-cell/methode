@@ -3,6 +3,7 @@
     src: url('fonts/metal_mania/Metal\ Mania.ttf') format('truetype');
 }
 
+/* Corps de la page */
 body {
     font-family: 'Metal Mania', sans-serif;
     margin: 0;
@@ -11,57 +12,51 @@ body {
     color: #000;
     line-height: 1.6;
 }
+
 /* Header */
 header {
     background-color: #000;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1rem;
     text-align: center;
 }
 header h1 {
-    font-family: 'Metal Mania';
-    margin: 0;
-    font-size: 2.5rem;
-    color: #fff; /* Le titre reste blanc par défaut */
-    transition: color 0.3s ease; /* Transition fluide pour la couleur */
+    font-size: 2rem; /* Taille réduite pour mobile */
 }
-
-header h1 a {
-    text-decoration: none; /* Supprime la décoration du lien */
-    color: #fff; /* Le lien à l'intérieur du titre reste blanc */
-}
-
-header h1:hover {
-    color: deeppink; /* Le titre entier devient deeppink au survol */
-}
-
 header h1 a:visited {
     color: #fff; /* Le lien visité reste blanc */
 }
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 1rem 0 0 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
+}
+
+nav ul li {
+    margin: 0.5rem 0; /* Espacement vertical pour les petits écrans */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2rem;
-    transition: color 0.3s ease; /* Transition fluide */
+    font-size: 1rem; /* Taille ajustée pour mobile */
 }
-
 nav ul li a:hover {
     color: deeppink; /* Couleur deep pink au survol */
 }
 
+
 /* Main Content */
 main {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
+}
+main img {
+    max-width: 100%; /* Assure que les images ne débordent pas */
+    height: auto; /* Maintient le ratio des images */
 }
 
 /* Footer */
@@ -91,3 +86,115 @@ footer .tools a:hover {
     text-decoration: underline;
 }
 
+/* Media Queries */
+@media (min-width: 768px) {
+    /* Tablettes et écrans moyens */
+    header h1 {
+        font-size: 2.5rem; /* Taille augmentée */
+    }
+    nav ul {
+        gap: 2rem;
+    }
+    main {
+        padding: 2rem;
+    }
+    footer .tools a {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Écrans larges */
+    header h1 {
+        font-size: 3rem; /* Texte plus grand */
+    }
+    nav ul {
+        justify-content: center;
+        gap: 3rem;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
+@font-face {
+    font-family: 'Metal Mania';
+    src: url('fonts/metal_mania/Metal\ Mania.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Hystory of wawa';
+    src: url('fonts/history_of_wawa/History\ of\ Wawa.ttf');
+}
+
+body {
+    font-family: 'Metal Mania', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Metal Mania';
+    margin: 0;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    color: #fff; /* Le titre reste blanc par défaut */
+    transition: color 0.3s ease; /* Transition fluide pour la couleur */
+}
+
+header h1 a {
+    text-decoration: none; /* Supprime la décoration du lien */
+    color: #fff; /* Le lien à l'intérieur du titre reste blanc */
+}
+
+header h1:hover {
+    color: deeppink; /* Le titre entier devient deeppink au survol */
+}
+
+header h1 a:hover {
+    color: deeppink; /* Le lien devient deeppink aussi au survol */
+}
+
+header h1 a:visited {
+    color: #fff; /* Le lien visité reste blanc */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    /* Tablettes et écrans moyens */
+    header h1 {
+        font-size: 2.5rem; /* Taille augmentée */
+    }
+    nav ul {
+        gap: 2rem;
+    }
+    main {
+        padding: 2rem;
+    }
+    footer .tools a {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Écrans larges */
+    header h1 {
+        font-size: 3rem; /* Texte plus grand */
+    }
+    nav ul {
+        justify-content: center;
+        gap: 3rem;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
