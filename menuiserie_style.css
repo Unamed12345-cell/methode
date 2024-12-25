@@ -277,3 +277,85 @@ footer .tools a:hover {
     text-decoration: underline;
 }
 
+@font-face {
+    font-family: 'Metal Mania';
+    src: url('fonts/metal_mania/Metal\ Mania.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Hystory of wawa';
+    src: url('fonts/history_of_wawa/History\ of\ Wawa.ttf');
+}
+
+body {
+    font-family: 'Metal Mania', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Metal Mania';
+    margin: 0;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    color: #fff; /* Le titre reste blanc par défaut */
+    transition: color 0.3s ease; /* Transition fluide pour la couleur */
+}
+
+header h1 a {
+    text-decoration: none; /* Supprime la décoration du lien */
+    color: #fff; /* Le lien à l'intérieur du titre reste blanc */
+}
+
+header h1:hover {
+    color: deeppink; /* Le titre entier devient deeppink au survol */
+}
+
+header h1 a:hover {
+    color: deeppink; /* Le lien devient deeppink aussi au survol */
+}
+
+header h1 a:visited {
+    color: #fff; /* Le lien visité reste blanc */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    /* Tablettes et écrans moyens */
+    header h1 {
+        font-size: 2.5rem; /* Taille augmentée */
+    }
+    nav ul {
+        gap: 2rem;
+    }
+    main {
+        padding: 2rem;
+    }
+    footer .tools a {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Écrans larges */
+    header h1 {
+        font-size: 3rem; /* Texte plus grand */
+    }
+    nav ul {
+        justify-content: center;
+        gap: 3rem;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}

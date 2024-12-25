@@ -64,6 +64,7 @@ main {
     text-decoration: underline; /* Ajoute le soulignement */
     text-decoration-color: #fff; /* Définit la couleur blanche pour le soulignement */
 }
+
 .mosaic-realisations {
     width: 100%; /* Prend toute la largeur de l'écran */
     display: flex; /* Active le modèle flexbox */
@@ -93,7 +94,6 @@ main {
     border-radius: 5px; /* Optionnel : ajoute des coins arrondis */
     transition: transform 0.3s ease; /* Ajoute une animation douce */
 }
-
 .mosaic-realisations img:hover {
     transform: scale(1.1); /* Agrandit légèrement l'image au survol */
 }
@@ -266,4 +266,38 @@ header h1 a:visited {
         font-size: 1rem;
     }
 }
+/* Applique Flexbox pour aligner les paragraphes horizontalement */
+.paragraphes {
+    display: flex; /* Utilise Flexbox pour l'alignement horizontal */
+    justify-content: space-around; /* Espacement égal entre les éléments */
+    align-items: center; /* Centrage vertical des paragraphes */
+    flex-wrap: wrap; /* Permet aux paragraphes de passer à la ligne si nécessaire */
+}
 
+/* Applique la police 'Metal Mania' aux liens et paragraphe */
+.paragraphes a {
+    text-decoration: none; /* Supprime la décoration par défaut des liens */
+}
+
+.paragraphes p {
+    font-family: 'Metal Mania', sans-serif; /* Applique la police Metal Mania */
+    margin: 0 10px; /* Espacement horizontal entre les paragraphes */
+    font-size: 2rem; /* Taille du texte */
+    text-align: center; /* Aligne le texte au centre */
+    color: black; /* La couleur du texte des paragraphes est blanche */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition fluide pour le survol */
+}
+
+.paragraphes p:hover {
+    color: deeppink; /* Change la couleur au survol */
+    transform: scale(1.1); /* Agrandit légèrement le texte au survol */
+}
+
+.paragraphes a:visited p {
+    color: black; /* La couleur des liens visités reste blanche */
+}
+
+/* Optionnel : Pour l'effet hover des liens */
+.paragraphes a:hover p {
+    color: deeppink; /* Change la couleur du texte du paragraphe au survol du lien */
+}
