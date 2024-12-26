@@ -4,6 +4,7 @@
     src: url('fonts/birds_of_paradise/Birds%20of%20Paradise%20©%20PERSONAL%20USE%20ONLY.ttf') format('truetype');
 }
 
+
 /* Global Styles */
 body {
     font-family: 'Birds of Paradise', sans-serif;
@@ -42,6 +43,11 @@ nav ul li a {
     color: #fff;
     font-size: 1.2rem;
 }
+nav ul li a:hover {
+    color:white; /* Changer la couleur au survol */
+    text-decoration: underline; /* Sous-ligner le lien au survol */
+}
+
 
 /* Main Content */
 main {
