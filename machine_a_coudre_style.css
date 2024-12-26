@@ -1,0 +1,113 @@
+/* Ajout de la police Birds of Paradise */
+@font-face {
+    font-family: 'Birds of Paradise';
+    src: url('fonts/birds_of_paradise/Birds%20of%20Paradise%20©%20PERSONAL%20USE%20ONLY.ttf') format('truetype');
+}
+
+
+/* Global Styles */
+body {
+    font-family: 'Birds of Paradise', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Birds of Paradise'; /* Police Birds of Paradise */
+    margin: 0;
+    font-size: 2.5rem;
+}
+header h1 a {
+    text-decoration: none; /* Supprime la décoration du lien */
+    color: #fff; /* Le lien à l'intérieur du titre reste blanc */
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+nav ul li a:hover {
+    color:white; /* Changer la couleur au survol */
+    text-decoration: underline; /* Sous-ligner le lien au survol */
+}
+
+
+/* Main Content */
+main {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Birds of Paradise', sans-serif;
+}
+
+footer .tools {
+    margin-bottom: 1rem;
+}
+
+footer .tools a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+footer .tools a:hover {
+    text-decoration: underline;
+}
+
+/* Style général pour l'image */
+.single-image {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrer verticalement */
+    margin: 0 auto;      /* Centrer horizontalement */
+    padding: 0;          /* Retirer les espacements autour du conteneur */
+    width: 100%;         /* Le conteneur occupe toute la largeur */
+}
+
+.single-image img {
+    width: 100%;         /* L'image occupe toute la largeur du conteneur */
+    max-width: 100%;     /* Supprimez toute limite stricte pour maximiser la taille */
+    height: auto;        /* Conserver les proportions de l'image */
+    display: block;      /* Supprimer les espaces en dessous de l'image */
+    margin: 0;           /* Supprimer les marges autour de l'image */
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+    .single-image img {
+        width: 100%;     /* Adapter la largeur de l'image à celle de l'écran */
+        max-width: none; /* Supprimer les contraintes pour les petits écrans */
+        margin: 0;       /* Ajuster les marges pour un meilleur rendu */
+    }
+}
