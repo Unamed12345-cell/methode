@@ -4,7 +4,6 @@
     src: url('fonts/birds_of_paradise/Birds%20of%20Paradise%20©%20PERSONAL%20USE%20ONLY.ttf') format('truetype');
 }
 
-
 /* Global Styles */
 body {
     font-family: 'Birds of Paradise', sans-serif;
@@ -13,9 +12,11 @@ body {
     background-color: #fff;
     color: #000;
     line-height: 1.6;
+    height: 100vh; /* Remplir toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column; /* Permet de placer les éléments enfants verticalement */
 }
 
-/* Header */
 header {
     background-color: #000;
     color: #fff;
@@ -43,19 +44,19 @@ nav ul li a {
     color: #fff;
     font-size: 1.2rem;
 }
+
 nav ul li a:hover {
     color:white; /* Changer la couleur au survol */
     text-decoration: underline; /* Sous-ligner le lien au survol */
 }
 
-
 /* Main Content */
 main {
     text-align: center;
     padding: 2rem;
+    flex-grow: 1; /* Permet à main de prendre l'espace restant */
 }
 
-/* Footer */
 footer {
     background-color: #000;
     color: #fff;
@@ -100,6 +101,10 @@ footer .tools a:hover {
 
 /* Media query pour les petits écrans */
 @media (max-width: 768px) {
+    body {
+        height: auto; /* Laisser la hauteur auto sur mobile */
+    }
+
     .single-image {
         width: 100%;        /* Le conteneur occupe toute la largeur */
         padding: 0;         /* Retirer les espacements si nécessaire */
@@ -111,5 +116,13 @@ footer .tools a:hover {
         height: auto;       /* Maintenir les proportions de l'image */
         margin: 0;          /* Supprimer les marges pour une meilleure intégration */
         padding: 0;         /* Supprimer les espacements internes */
+    }
+
+    header, main, footer {
+        padding: 1.5rem;  /* Augmenter légèrement les espacements sur mobile */
+    }
+
+    main {
+        padding-top: 1.5rem; /* Espacement en haut de main */
     }
 }

@@ -107,14 +107,17 @@ footer .tools a:hover {
 
 /* Media query pour les petits écrans */
 @media (max-width: 768px) {
+    .single-image {
+        width: 100%;        /* Le conteneur occupe toute la largeur */
+        padding: 0;         /* Retirer les espacements si nécessaire */
+    }
+
     .single-image img {
-        width: 100vw;     /* L'image prend toute la largeur de l'écran */
-        height: 100vh;    /* L'image prend toute la hauteur de l'écran */
-        object-fit: cover; /* Ajuster l'image pour couvrir tout l'écran */
-        max-width: none;  /* Supprimer les limites maximales */
-        margin: 0;        /* Supprimer les marges */
-        padding: 0;       /* Supprimer les éventuels espacements internes */
-        display: block;   /* Éviter les espaces supplémentaires */
+        width: 100%;        /* L'image prend toute la largeur du conteneur */
+        max-width: 100%;    /* Retirer toute limite maximale */
+        height: auto;       /* Maintenir les proportions de l'image */
+        margin: 0;          /* Supprimer les marges pour une meilleure intégration */
+        padding: 0;         /* Supprimer les espacements internes */
+        object-fit: cover;  /* Ajuster l'image pour couvrir sans être déformée */
     }
 }
-
