@@ -120,4 +120,12 @@ footer .tools a:hover {
         padding: 0;         /* Supprimer les espacements internes */
         object-fit: cover;  /* Ajuster l'image pour couvrir sans être déformée */
     }
+
+    header, main, footer {
+        padding: 0.75rem;  /* Augmenter légèrement les espacements sur mobile */
+    }
+
+    main {
+        padding-top: 0.75rem; /* Augmenter l'espacement en haut de main */
+    }
 }

@@ -119,10 +119,10 @@ footer .tools a:hover {
     }
 
     header, main, footer {
-        padding: 1.5rem;  /* Augmenter légèrement les espacements sur mobile */
+        padding: 2.5rem;  /* Augmenter légèrement les espacements sur mobile */
     }
 
     main {
-        padding-top: 1.5rem; /* Espacement en haut de main */
+        padding-top: 2.5rem; /* Espacement en haut de main */
     }
 }
