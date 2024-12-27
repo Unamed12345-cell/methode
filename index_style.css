@@ -80,50 +80,36 @@ footer .tools a:hover {
     text-decoration: underline;
 }
 
-/* Style général pour l'image */
+/* Style général pour le conteneur et l'image */
 .single-image {
     display: flex;
     justify-content: center;
-    align-items: center;  /* Ajoutez align-items pour un centrage vertical */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px; /* Espace autour de l'image si nécessaire */
-    width: 80%; /* Assurez-vous que le conteneur occupe toute la largeur disponible */
+    align-items: center; /* Centrage vertical */
+    margin: 0 auto;      /* Centrer horizontalement le conteneur */
+    padding: 10px;       /* Espace autour de l'image (facultatif) */
+    width: 80%;          /* Largeur du conteneur */
 }
 
 .single-image img {
-    width: 70%;    /* L'image prendra toute la largeur disponible */
-    max-width: 250px;  /* Taille maximale de l'image */
-    height: auto;   /* La hauteur est ajustée automatiquement pour maintenir les proportions */
-    display: block; /* Eviter tout espace en dessous de l'image */
-    margin: 0 auto;  /* Assurez-vous que l'image est centrée horizontalement */
-}
-
-.single-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    padding: 0;  /* Optionnel : Si vous souhaitez enlever tout espacement autour de l'image */
-    margin: 0 auto;  /* Centrer le conteneur */
-}
-
-.single-image img {
-    display: block;   /* Supprimer l'espace en dessous de l'image */
-    width: 70%;        /* L'image prendra toute la largeur du conteneur */
-    max-width: 300px;   /* Limiter la taille de l'image */
-    height: auto;       /* La hauteur s'ajuste automatiquement pour préserver les proportions */
+    display: block;      /* Supprimer l'espace en dessous de l'image */
+    width: 70%;          /* L'image prend une large partie de la largeur du conteneur */
+    max-width: 250px;    /* Taille maximale de l'image */
+    height: auto;        /* Préserver les proportions de l'image */
+    margin: 0 auto;      /* Centrer l'image horizontalement */
 }
 
 /* Media query pour les petits écrans */
-
 @media (max-width: 768px) {
+    .single-image {
+        width: 100%;        /* Le conteneur occupe toute la largeur */
+        padding: 0;         /* Retirer les espacements si nécessaire */
+    }
+
     .single-image img {
-        width: 170%;       /* L'image prendra toute la largeur disponible */
-        max-width: 600px;  /* Limitation de la taille maximale */
-        margin-top: 0px;   /* Ajuster la marge supérieure sur mobile */
-        margin-bottom: 0px;   /* Ajuster la marge inférieure sur mobile */
-        margin-left: 20px;    /* Ajuster la marge gauche sur mobile */
-        margin-right: 20px;   /* Ajuster la marge droite sur mobile */
+        width: 100%;        /* L'image occupe toute la largeur du conteneur */
+        max-width: none;    /* Retirer toute limite maximale */
+        height: auto;       /* Maintenir les proportions de l'image */
+        margin: 0;          /* Supprimer les marges pour une meilleure intégration */
+        padding: 0;         /* Supprimer les espacements internes */
     }
 }

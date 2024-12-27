@@ -85,7 +85,7 @@ footer .tools a:hover {
     text-decoration: underline;
 }
 
-/* Style général pour l'image */
+/* Style général pour le conteneur de l'image */
 .single-image {
     display: flex;
     justify-content: center;
@@ -93,11 +93,13 @@ footer .tools a:hover {
     margin: 0 auto;      /* Centrer horizontalement */
     padding: 0;          /* Retirer les espacements autour du conteneur */
     width: 100%;         /* Le conteneur occupe toute la largeur */
+    height: auto;        /* Hauteur automatique pour ajuster l'image */
 }
 
+/* Style pour l'image */
 .single-image img {
     width: 100%;         /* L'image occupe toute la largeur du conteneur */
-    max-width: 100%;     /* Supprimez toute limite stricte pour maximiser la taille */
+    max-width: 230px;   /* Limite la taille maximale à 1000px pour les grands écrans */
     height: auto;        /* Conserver les proportions de l'image */
     display: block;      /* Supprimer les espaces en dessous de l'image */
     margin: 0;           /* Supprimer les marges autour de l'image */
@@ -106,8 +108,13 @@ footer .tools a:hover {
 /* Media query pour les petits écrans */
 @media (max-width: 768px) {
     .single-image img {
-        width: 100%;     /* Adapter la largeur de l'image à celle de l'écran */
-        max-width: none; /* Supprimer les contraintes pour les petits écrans */
-        margin: 0;       /* Ajuster les marges pour un meilleur rendu */
+        width: 100vw;     /* L'image prend toute la largeur de l'écran */
+        height: 100vh;    /* L'image prend toute la hauteur de l'écran */
+        object-fit: cover; /* Ajuster l'image pour couvrir tout l'écran */
+        max-width: none;  /* Supprimer les limites maximales */
+        margin: 0;        /* Supprimer les marges */
+        padding: 0;       /* Supprimer les éventuels espacements internes */
+        display: block;   /* Éviter les espaces supplémentaires */
     }
 }
+
